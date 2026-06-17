@@ -1,0 +1,26 @@
+menu "Popo Configuration"
+
+config POPO_BACKEND_URL
+    string "Popo Backend URL"
+    default "https://popo-app.vercel.app"
+    help
+        The base URL of the deployed Popo backend API.
+
+config POPO_OWM_API_KEY
+    string "OpenWeatherMap API Key"
+    default ""
+    help
+        API key from https://openweathermap.org
+
+config POPO_CITY
+    string "Default City for Weather"
+    default "London"
+    help
+        City name used for weather fetching.
+
+config POPO_WAKE_WORD_THRESHOLD
+    int "Wake Word Detection Threshold (0-100)"
+    default 80
+    range 50 99
+
+endmenu
